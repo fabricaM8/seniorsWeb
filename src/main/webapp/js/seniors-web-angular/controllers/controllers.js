@@ -71,10 +71,10 @@ app.controller('MedicacaoDetailCtrl', function($scope, $rootScope, $routeParams,
 
 	// callback for ng-click 'cancel':
 	$scope.cancel = function() {
-		$location.path('/user/list');
+		$location.path('/medicacao/list');
 	};
 
-	$scope.update_user = UserFactory.show({
+	$scope.update_medicacao = MedicacaoFactory.show({
 		id : $routeParams.id
 	});
 	
