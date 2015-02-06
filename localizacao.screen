@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" id="1" x="32" y="10" height="311" text="Localização" measuredWidth="400" measuredHeight="311"/>
+  <widgets xsi:type="model:Map" id="2" x="48" y="80" width="369" height="220" measuredWidth="369" measuredHeight="220"/>
+  <widgets xsi:type="model:Label" id="3" x="48" y="45" width="193" text="Data/Hora Ult. Localização" measuredWidth="193" measuredHeight="25">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="4" x="248" y="46" width="92" measuredWidth="92" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Callout" id="5" x="248" y="152" width="28" height="27" text="Fulano" measuredWidth="28" measuredHeight="27">
+    <font size="5px" bold="true"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

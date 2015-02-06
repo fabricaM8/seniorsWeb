@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" id="1" width="249" height="273" text="Medicação" measuredWidth="249" measuredHeight="273"/>
+  <widgets xsi:type="model:TextField" id="2" x="16" y="41" width="184" text="Nome Medicamento" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="5" x="16" y="72" width="184" text="Observacao" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="8" x="177" y="232" text="Feito" measuredWidth="50" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:ButtonBar" id="10" x="83" y="104" width="86" height="23" text="1, 2, 3" measuredWidth="86" measuredHeight="23" selection="0">
+    <font/>
+    <items x="0" y="0" width="30" height="23" text="1"/>
+    <items x="30" y="0" width="29" height="23" text="2"/>
+    <items x="59" y="0" width="27" height="23" text="3"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="18" y="104" text="Prioridade" measuredWidth="66" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="12" x="56" y="136" text="agora" measuredWidth="61" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="13" x="18" y="136" text="Inicio" measuredWidth="38" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="14" x="176" y="136" text="x dias" measuredWidth="62" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="15" x="122" y="136" text="Duração" measuredWidth="55" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="16" x="87" y="167" text="x horas" measuredWidth="71" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="17" x="18" y="167" text="Frequencia" measuredWidth="70" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="18" x="87" y="199" text="x" measuredWidth="35" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="19" x="18" y="199" text="Dosagem" measuredWidth="61" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="20" x="124" y="199" text="comprimidos" measuredWidth="104" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="21" x="18" y="233" text="Salvar" measuredWidth="55" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="22" x="76" y="233" width="63" text="Cancelar" measuredWidth="63" measuredHeight="25">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

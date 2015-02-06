@@ -14,7 +14,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name="USER")
@@ -31,7 +30,7 @@ public class User implements Serializable {
 	private String name;
 
 	@Column(name = "idade", nullable = true)
-	private int idade;
+	private Integer idade;
 
 	private String email;
 
@@ -44,11 +43,11 @@ public class User implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<AuthenticationHash> authenticationHashs = new LinkedHashSet<AuthenticationHash>();
 
-	public int getIdade() {
+	public Integer getIdade() {
 		return idade;
 	}
 
-	public void setIdade(int idade) {
+	public void setIdade(Integer idade) {
 		this.idade = idade;
 	}
 

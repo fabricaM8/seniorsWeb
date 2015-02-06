@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" id="1" width="433" height="337" text="Cadastro de Usuário - Perfil: Senior" measuredWidth="433" measuredHeight="337"/>
+  <widgets xsi:type="model:TextField" id="2" x="16" y="32" width="401" text="Nome" measuredWidth="401" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="3" x="16" y="64" width="401" text="Endereco" measuredWidth="401" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="4" x="16" y="96" width="201" text="E-mail" measuredWidth="201" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="5" x="13" y="301" width="63" text="Salvar" measuredWidth="63" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="6" x="81" y="301" text="Cancelar" measuredWidth="71" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="10" x="16" y="162" width="196" text="Celular" measuredWidth="196" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="11" x="224" y="162" width="193" text="Perfil: Senior" measuredWidth="193" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="12" x="248" y="96" width="169" text="Usuário" measuredWidth="169" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="13" x="16" y="128" width="178" text="Senha" measuredWidth="178" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="14" x="224" y="128" width="193" text="Repetir Senha" measuredWidth="193" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="15" x="12" y="196" width="405" height="93" text="Saúde" measuredWidth="405" measuredHeight="93">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="16" x="25" y="221" width="376" text="Doenças" measuredWidth="376" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="17" x="26" y="251" width="168" text="Raio Segurança" measuredWidth="168" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="18" x="208" y="251" width="193" text="Tipo Sanguineo" measuredWidth="193" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

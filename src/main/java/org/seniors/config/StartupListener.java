@@ -28,6 +28,7 @@ public class StartupListener implements ServletContextListener {
     		//TODO: Add logs
 			SeniorsServerControllerFacadeImpl.getInstance().getSeniorsUserController().searchById(1L);
 			SeniorsServerControllerFacadeImpl.getInstance().getUserController().createUsersStub();
+			SeniorsServerControllerFacadeImpl.getInstance().getMedicacaoController().createMedicacaoStub();
 		} catch (Exception e) {
 			
 			//TODO: Add logs

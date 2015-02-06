@@ -131,14 +131,20 @@ public class SeniorsUserController {
 		try {
 			SeniorsUser user = new SeniorsUser();
 			user.setName("Admin");
-			user.setEmail("admin@morpho.com");
+			user.setEmail("admin@seniors.com");
 			user.setPassword(SeniorsConfig.getPasswordEncoder().encode("123456"));
-			user.setRole(Role.ADMIN);
-			if (!userDao.exists("email", "admin@morpho.com")) {
+			user.setRole(Role.ADMINISTRADOR.getName());
+			user.setIdade(0);
+			user.setAltura(9);
+			user.setPeso(9);
+			user.setRaio_seg(9);
+			user.setCelular("9999-9999");
+			if (!userDao.exists("email", "admin@seniors.com")) {
 				userDao.persist(user);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
 }

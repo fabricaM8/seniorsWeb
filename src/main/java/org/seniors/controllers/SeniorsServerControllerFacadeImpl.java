@@ -15,6 +15,7 @@ public class SeniorsServerControllerFacadeImpl implements SeniorsServerControlle
 	private static SeniorsServerControllerFacadeImpl instance = null;
 
 	//Controllers
+	private static MedicacaoController medicacaoController;
 	private static UserController userController;
 	private static SeniorsUserController seniorsUserController;
 	
@@ -29,6 +30,7 @@ public class SeniorsServerControllerFacadeImpl implements SeniorsServerControlle
 			instance = new SeniorsServerControllerFacadeImpl();
 			seniorsUserController = SeniorsUserController.getInstance();
 			userController = UserController.getInstance();
+			medicacaoController = MedicacaoController.getInstance();
 		}
 		return instance;
 	}
@@ -37,6 +39,10 @@ public class SeniorsServerControllerFacadeImpl implements SeniorsServerControlle
 	@Override
 	public SeniorsUserController getSeniorsUserController() {
 		return seniorsUserController;
+	}
+
+	public MedicacaoController getMedicacaoController() {
+		return medicacaoController;
 	}
 
 	public UserController getUserController() {

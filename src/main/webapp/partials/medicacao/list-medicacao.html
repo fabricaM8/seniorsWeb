@@ -1,0 +1,26 @@
+	<div class="col-md-12">
+		<div class="content-panel">
+		    <table class="table table-striped table-advance table-hover">
+		    	<h4><i class="fa fa-angle-right"></i>Medicações</h4>
+	            <hr>
+		        <thead>
+		        <tr>
+		        	<th><i class=" fa fa-edit"></i> Nome</th>
+		        	<th><i class=" fa fa-edit"></i> Obs</th>
+		        	<th><i class=" fa fa-edit"></i></th>
+		        </tr>
+		        </thead>
+		        <tbody>
+		        <tr ng-repeat="med in meds">
+		            <td>{{med.nome}}</td>
+		            <td>{{med.obs}}</td>
+		            <td>
+			            <button class="btn btn-primary btn-xs" ng-click="editMedicacao(med.id)"><i class="fa fa-pencil"></i></button>
+			            <button class="btn btn-danger btn-xs" ng-click="deleteMedicacao(med.id)"><i class="fa fa-trash-o "></i></button>
+			        </td>
+		        </tr>
+		        </tbody>
+		    </table>
+		    <a ng-click="createNewMedicacao()" class="btn btn-default">Nova Medicação</a>
+		</div>	
+	</div>	

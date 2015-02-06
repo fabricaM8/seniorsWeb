@@ -20,6 +20,7 @@ var services = angular.module('seniorsApp');
 services.factory('UsersFactory', function ($resource) {
     return $resource(serverAddress+'/users', {}, {
         query: { method: 'GET', isArray: true },
+        queryRole: { method: 'GET', isArray: true },
         create: { method: 'POST' }
     });
 });
@@ -30,6 +31,23 @@ services.factory('UserFactory', function ($resource) {
         update: { method: 'PUT', params: {id: '@id'} },
         remove: { method: 'DELETE', params: {id: '@id'} }
     });
+});
+
+//MEDICACAO
+services.factory('MedicacoesFactory', function ($resource) {
+ return $resource(serverAddress+'/medicacao', {}, {
+     query: { method: 'GET', isArray: true },
+     queryRole: { method: 'GET', isArray: true },
+     create: { method: 'POST' }
+ });
+});
+
+services.factory('MedicacaoFactory', function ($resource) {
+ return $resource(serverAddress+'/medicacao/:id', {}, {
+     show: { method: 'GET' },
+     update: { method: 'PUT', params: {id: '@id'} },
+     remove: { method: 'DELETE', params: {id: '@id'} }
+ });
 });
 
 //Login service
@@ -49,37 +67,4 @@ services.factory('UserLoginService', function($resource) {
 			params: {'action' : 'logout'}
 		},
 	});
-});
-
-
-// OFFERS
-services.factory('OffersFactory', function ($resource) {
-    return $resource(serverAddress+'/offers', {}, {
-    	query: { method: 'GET', isArray: true },
-        create: { method: 'POST' }
-    });
-});
-
-services.factory('OfferFactory', function ($resource) {
-    return $resource(serverAddress+'/offers/:id', {}, {
-        show: { method: 'GET' },
-        update: { method: 'PUT', params: {id: '@id'} },
-        remove: { method: 'DELETE', params: {id: '@id'} }
-    });
-});
-
-//Categories
-services.factory('CategoriesFactory', function ($resource) {
-    return $resource(serverAddress+'/categories', {}, {
-    	query: { method: 'GET', isArray: true },
-        create: { method: 'POST' }
-    });
-});
-
-services.factory('CategoryFactory', function ($resource) {
-    return $resource(serverAddress+'/categories/:id', {}, {
-        show: { method: 'GET' },
-        update: { method: 'PUT', params: {id: '@id'} },
-        remove: { method: 'DELETE', params: {id: '@id'} }
-    });
 });

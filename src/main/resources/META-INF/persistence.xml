@@ -9,7 +9,6 @@
 
 		<class>org.seniors.model.AuthenticationHash</class>
 		<class>org.seniors.model.User</class>
-		<class>org.seniors.model.ImageURL</class>
 
 		<properties>
 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/seniors_web" />

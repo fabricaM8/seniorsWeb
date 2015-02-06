@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="12" y="-8" width="704" height="512" text="Index - DashBoard" measuredWidth="704" measuredHeight="512"/>
+  <widgets xsi:type="model:Accordion" id="13" x="10" y="176" height="321" text="Usuários&#xA;Atividades&#xA;Medicamentos&#xA;Localização&#xA;" measuredWidth="100" measuredHeight="321" selection="0">
+    <items x="0" y="2" width="100" height="25" text="Usuários"/>
+    <items x="0" y="246" width="100" height="25" text="Atividades"/>
+    <items x="0" y="271" width="100" height="25" text="Medicamentos"/>
+    <items x="0" y="296" width="100" height="25" text="Localização"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="14" x="4" y="71" width="700" measuredWidth="700" measuredHeight="6"/>
+  <widgets xsi:type="model:Button" id="15" x="637" y="49" width="52" height="22" text="LogOut" measuredWidth="52" measuredHeight="22">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="17" x="17" y="82" width="82" height="86" measuredWidth="82" measuredHeight="86">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="18" x="23" y="96" width="72" text="Fulano" measuredWidth="72" measuredHeight="58" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="19" x="189" y="46" width="29" height="25" measuredWidth="29" measuredHeight="25" icon="calendar (large)"/>
+  <widgets xsi:type="model:Icon" id="20" x="226" y="47" width="27" height="29" measuredWidth="27" measuredHeight="29" icon="email (large)"/>
+  <widgets xsi:type="model:Panel" id="21" x="119" y="86" width="572" height="403" measuredWidth="572" measuredHeight="403"/>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

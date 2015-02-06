@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" id="1" x="-96" y="-25" width="233" height="138" text="Cadastro de Atividades" measuredWidth="233" measuredHeight="138"/>
+  <widgets xsi:type="model:TextField" id="2" x="-72" y="36" width="184" text="Descrição" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="5" x="62" y="68" text="Feito" measuredWidth="50" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="6" x="-31" y="68" text="  /  /  " measuredWidth="66" measuredHeight="23"/>
+  <widgets xsi:type="model:Label" id="7" x="-72" y="68" text="Data" measuredWidth="33" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="8" x="-72" y="7" width="184" text="Titulo" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

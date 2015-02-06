@@ -5,5 +5,15 @@ package org.seniors.model;
  * @author <a hre="mailto:juliosugaya@gmail.com">Julio Sugaya</a>
  */
 public enum Role {
-	ADMIN, USER
+	ADMINISTRADOR("Administrador"), CUIDADOR("Cuidador"), SENIOR("Senior");
+	
+	private final String name;
+	
+	Role(String name){
+		this.name = name;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
 }

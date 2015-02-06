@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" id="1" x="33" y="5" width="264" height="188" text="Consultas Médicas" measuredWidth="264" measuredHeight="188"/>
+  <widgets xsi:type="model:TextField" id="2" x="58" y="48" width="184" text="Titulo" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="5" x="58" y="76" width="184" text="Nome Médico" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="6" x="58" y="105" width="184" text="Local" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="7" x="95" y="138" text="  /  /  " measuredWidth="66" measuredHeight="23"/>
+  <widgets xsi:type="model:Label" id="8" x="60" y="138" text="Data" measuredWidth="33" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="9" x="190" y="137" text="Feito" measuredWidth="50" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

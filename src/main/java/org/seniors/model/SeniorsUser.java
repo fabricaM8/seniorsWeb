@@ -8,8 +8,6 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -38,16 +36,39 @@ public class SeniorsUser implements Serializable, UserDetails {
 	private String name;
 
 	private String email;
+
+	private String endereco;
+
+	private String tipo_sanguineo;
+
+	private String doencas;
+	
+	@Column(name = "raio_seg", nullable = true)
+	private Integer raio_seg;
+
+	private String celular;
 	
 	@XmlTransient
 	private String password;
 
-	@Enumerated(EnumType.STRING)
-	private Role role;
+	private String role;
+
+	@Column(name = "altura", nullable = true)
+	private Integer altura;
 	
-//	@ElementCollection(fetch = FetchType.EAGER)
-//	@CollectionTable(name="WALLET_USER_ROLES")
-//	private List<String> roles = new ArrayList<String>();
+	@Column(name = "peso", nullable = true)
+	private Integer peso;
+	
+	@Column(name = "idade", nullable = true)
+	private Integer idade;
+	
+	public Integer getIdade() {
+		return idade;
+	}
+
+	public void setIdade(Integer idade) {
+		this.idade = idade;
+	}
 
 	public Long getId() {
 		return id;
@@ -80,14 +101,11 @@ public class SeniorsUser implements Serializable, UserDetails {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-//	public List<String> getRoles() {
-//		return roles;
-//	}	public Role getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(Role role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 
@@ -102,7 +120,7 @@ public class SeniorsUser implements Serializable, UserDetails {
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 //		Set<String> roles = this.getRoles();
-		Role role = this.getRole();
+		String role = this.getRole();
 
 		if (role == null) {
 			return Collections.emptyList();
@@ -110,7 +128,7 @@ public class SeniorsUser implements Serializable, UserDetails {
 
 		Set<GrantedAuthority> authorities = new HashSet<GrantedAuthority>();
 //		for (String role : roles) {
-		authorities.add(new SimpleGrantedAuthority(role.toString().toLowerCase()));
+		authorities.add(new SimpleGrantedAuthority(role.toLowerCase()));
 //		}
 		return authorities;
 	}
@@ -138,5 +156,61 @@ public class SeniorsUser implements Serializable, UserDetails {
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+
+	public String getTipo_sanguineo() {
+		return tipo_sanguineo;
+	}
+
+	public void setTipo_sanguineo(String tipo_sanguineo) {
+		this.tipo_sanguineo = tipo_sanguineo;
+	}
+
+	public String getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getDoencas() {
+		return doencas;
+	}
+
+	public void setDoencas(String doencas) {
+		this.doencas = doencas;
+	}
+
+	public Integer getRaio_seg() {
+		return raio_seg;
+	}
+
+	public void setRaio_seg(Integer raio_seg) {
+		this.raio_seg = raio_seg;
+	}
+
+	public String getCelular() {
+		return celular;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+
+	public Integer getAltura() {
+		return altura;
+	}
+
+	public void setAltura(Integer altura) {
+		this.altura = altura;
+	}
+
+	public Integer getPeso() {
+		return peso;
+	}
+
+	public void setPeso(Integer peso) {
+		this.peso = peso;
 	}
 }

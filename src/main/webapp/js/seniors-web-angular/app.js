@@ -2,37 +2,21 @@ var App = angular.module('seniorsApp', [ 'ngRoute', 'ngResource', 'ngCookies', '
 
 App.config([ '$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 		
-			//  Category CRUD
-			$routeProvider.when('/categories/new', {
-				templateUrl : 'partials/categories/new-category.html',
-				controller : 'CategoriesCreationCtrl'
+			//  Medicacao CRUD
+			$routeProvider.when('/medicacao/list', {
+				templateUrl : 'partials/medicacao/list-medicacao.html',
+				controller : 'MedicacaoListCtrl'
 			});
 			
-			$routeProvider.when('/categories/list', {
-				templateUrl : 'partials/categories/list-category.html',
-				controller : 'CategoriesListCtrl'
-			});
-		
-			//  Offers CRUD
-			$routeProvider.when('/offer/new', {
-				templateUrl : 'partials/offer/new-offer.html',
-				controller : 'OfferCreationCtrl'
-			});
-			
-			$routeProvider.when('/offer/list', {
-				templateUrl : 'partials/offer/list-offer.html',
-				controller : 'OfferListCtrl'
-			});
-			
-			$routeProvider.when('/offer/detail/:id', {
-				templateUrl : 'partials/offer/detail-offer.html',
-				controller : 'OfferDetailCtrl'
+			$routeProvider.when('/medicacao/detail/:id', {
+				templateUrl : 'partials/medicacao/detail-medicacao.html',
+				controller : 'MedicacaoDetailCtrl'
 			});
 
 			//  Users CRUD
 			$routeProvider.when('/user/new', {
-				templateUrl : 'partials/user/new-user.html',
-				controller : 'UserCreationCtrl'
+				templateUrl : 'partials/user/detail-user.html',
+				controller : 'UserDetailCtrl'
 			});
 			
 			$routeProvider.when('/user/list', {

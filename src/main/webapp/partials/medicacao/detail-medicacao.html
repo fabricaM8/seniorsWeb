@@ -1,12 +1,12 @@
 <div class="form-panel">
-    <h2>Edi&ccedil;&atilde;o de Usu&aacute;rios</h2>
+    <h2>Edi&ccedil;&atilde;o de Medicação</h2>
 
-    <form novalidate="novalidate" name="user_form" class="form-horizontal style-form" ng-submit="updateUser()" role="form">
+    <form novalidate="novalidate" name="medicacao_form" class="form-horizontal style-form" ng-submit="updateMedicacao()" role="form">
 
 		<div class="form-group">
-			<label class="col-sm-2 col-sm-2 control-label">Nome</label>
+			<label class="col-sm-2 col-sm-2 control-label">Nome Medicação</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="name" name="name" ng-model="update_user.name" placeholder="Nome" 
+				<input type="text" class="form-control" id="name" name="name" ng-model="update_medicacao.name" placeholder="Nome" 
                 	ng-minlength="2" ng-maxlength="140" maxlength="140" required/>
 			</div>
 			<!-- Validation DIV -->
@@ -23,7 +23,7 @@
 		<div class="form-group">
 			<label class="col-sm-2 col-sm-2 control-label">Endereço</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="endereco" name="endereco" ng-model="update_user.endereco" placeholder="Endereço" 
+				<input type="text" class="form-control" id="endereco" name="endereco" ng-model="update_medicacao.endereco" placeholder="Endereço" 
                 	ng-minlength="2" ng-maxlength="200" maxlength="200"/>
 			</div>
 			<!-- Validation DIV -->
@@ -41,7 +41,7 @@
 		<div class="form-group">
 			<label class="col-sm-2 col-sm-2 control-label">Email</label>
 			<div class="col-sm-5">
-				<input type="text" class="form-control" id="email" name="txemail" ng-model="update_user.email" placeholder="E-mail" required/>
+				<input type="text" class="form-control" id="email" name="txemail" ng-model="update_medicacao.email" placeholder="E-mail" required/>
 			</div>
 			<!-- Validation DIV -->
 			<div class="alert alert-warning alert-dismissible" role="alert"
@@ -53,7 +53,7 @@
 			</div>
 			<label class="col-sm-2 col-sm-2 control-label">Celular</label>
 			<div class="col-sm-3">
-				<input type="text" class="form-control" id="celular" name="celular" ng-model="update_user.celular" placeholder="Celular" 
+				<input type="text" class="form-control" id="celular" name="celular" ng-model="update_medicacao.celular" placeholder="Celular" 
                 	ng-minlength="2" ng-maxlength="200" maxlength="200"/>
 			</div>
 			<!-- Validation DIV -->
@@ -72,7 +72,7 @@
 
             <div class="col-sm-10">
                 <input type="password" class="form-control" id="txpassword" ng-minlength="6" ng-maxlength="16" maxlength="16"
-                	  name="txpassword" ng-model="update_user.password" placeholder="Senha" ng-pattern="/^[a-zA-Z0-9\-\_]{1,}$/" ng-trim="false" required/>
+                	  name="txpassword" ng-model="update_medicacao.password" placeholder="Senha" ng-pattern="/^[a-zA-Z0-9\-\_]{1,}$/" ng-trim="false" required/>
             </div>
             
             <!-- Validation DIV -->
@@ -94,7 +94,7 @@
 
             <div class="col-sm-10">
                 <input type="password" class="form-control" id="repassword" ng-minlength="6" ng-maxlength="16" maxlength="16" 
-                			name="repassword" ng-model="repassword" placeholder="Repetir a senha" nx-equal-ex="update_user.password" required />
+                			name="repassword" ng-model="repassword" placeholder="Repetir a senha" nx-equal-ex="update_medicacao.password" required />
             </div>
             
             <div class="alert alert-warning alert-dismissible" role="alert" ng-show="user_form.repassword.$error.nxEqualEx">
@@ -107,7 +107,7 @@
 			<label class="col-sm-2 col-sm-2 control-label" for="role">Perfil do Usu&aacute;rio</label>
            	
            	 <div class="col-sm-5">
- 	           	<select id="role" name="role" ng-model="update_user.role" required class="form-control">
+ 	           	<select id="role" name="role" ng-model="update_medicacao.role" required class="form-control">
 	           		<option value="ADMINISTRADOR">Administrador</option>
 	           		<option value="CUIDADOR">Cuidador</option>
 	           		<option value="SENIOR">Senior</option>
@@ -120,16 +120,16 @@
 				</select> -->
            	 </div>
         </div>
-	        <div class="form-group" ng-show="update_user.role=='SENIOR'">
+	        <div class="form-group" ng-show="update_medicacao.role=='SENIOR'">
 	        <div class="col-sm-12">
 				<label class="col-sm-2 control-label">Tipo Sanguineo</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" id="tipo_sanguineo" name="tipo_sanguineo" ng-model="update_user.tipo_sanguineo" placeholder="Tipo Sanguineo" 
+					<input type="text" class="form-control" id="tipo_sanguineo" name="tipo_sanguineo" ng-model="update_medicacao.tipo_sanguineo" placeholder="Tipo Sanguineo" 
 	                	ng-minlength="2" ng-maxlength="5" maxlength="5"/>
 				</div>
 				<label class="col-sm-2 control-label">Raio de Segurança</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" id="raio_seg" name="raio_seg" ng-model="update_user.raio_seg" placeholder="Raio" 
+					<input type="text" class="form-control" id="raio_seg" name="raio_seg" ng-model="update_medicacao.raio_seg" placeholder="Raio" 
 	                	ng-minlength="2" ng-maxlength="5" maxlength="5"/>
 				</div>
 				<label class="control-label">km</label>
@@ -139,12 +139,12 @@
 			<div class="col-sm-12">
 				<label class="col-sm-2 control-label">Peso</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" id="peso" name="peso" ng-model="update_user.peso" placeholder="Peso (Kg)" 
+					<input type="text" class="form-control" id="peso" name="peso" ng-model="update_medicacao.peso" placeholder="Peso (Kg)" 
 	                	ng-minlength="2" ng-maxlength="5" maxlength="5"/>
 				</div>
 				<label class="col-sm-2 control-label">Altura</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" id="altura" name="altura" ng-model="update_user.altura" placeholder="Altura" 
+					<input type="text" class="form-control" id="altura" name="altura" ng-model="update_medicacao.altura" placeholder="Altura" 
 	                	ng-minlength="2" ng-maxlength="5" maxlength="5"/>
 				</div>
 			</div>	
@@ -154,7 +154,7 @@
 			
 				<label class="col-sm-2 control-label">Doenças</label>
 				<div class="col-sm-5">
-					<input type="text" class="form-control" id="doenca" name="doenca" ng-model="update_user.doenca" placeholder="Doenças" 
+					<input type="text" class="form-control" id="doenca" name="doenca" ng-model="update_medicacao.doenca" placeholder="Doenças" 
 	                	ng-minlength="2" ng-maxlength="200" maxlength="200"/>
 				</div>
 			</div>

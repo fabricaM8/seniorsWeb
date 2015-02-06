@@ -14,4 +14,5 @@ public interface SeniorsServerMessages {
 	public static final String SOME_WRONG_INFO 				= "WS05";
 	public static final String EMAIL_OR_CPF_INCORRECT	    = "WS06";
 	public static final String OFFER_WITH_ZERO_POINTS	    = "WS07";
+	public static final String MEDICACAO_ALREADY_EXISTS 	= "WS08";
 }
