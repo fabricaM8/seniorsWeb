@@ -4,7 +4,7 @@
     <form novalidate="novalidate" name="medicacao_form" class="form-horizontal style-form" ng-submit="updateMedicacao()" role="form">
 
 		<div class="form-group">
-			<label class="col-sm-2 col-sm-2 control-label">Nome Medicação</label>
+			<label class="col-sm-2 control-label">Nome Medicação</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="nome" name="nome" ng-model="update_medicacao.nome" placeholder="Medicação" 
                 	ng-minlength="2" ng-maxlength="140" maxlength="140" required/>
@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 col-sm-2 control-label">Observação</label>
+			<label class="col-sm-2 control-label">Observação</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="obs" name="obs" ng-model="update_medicacao.obs" placeholder="Observação" 
                 	ng-minlength="2" ng-maxlength="200" maxlength="200"/>
@@ -30,25 +30,56 @@
 
 
         <div class="form-group">
-			<div class="radio">
-			  <label>
-			    <input type="radio" class="col-sm-2" name="optionsPrioridade" id="options1" value="1" checked> 1
-			    <input type="radio" class="col-sm-2" name="optionsPrioridade" id="options2" value="2"> 2
-			    <input type="radio" class="col-sm-2" name="optionsPrioridade" id="options3" value="3"> 3
-			  </label>
+			<div class="col-sm-2"></div>
+			<div class="btn-group col-sm-3" data-toggle="buttons">
+			  	<button type="button" name="myStateButton" id="rdb01" data-complete-text="ok" class="btn btn-primary" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+				</button>
+			  	<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-warning" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+				</button>
+				<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-success" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+				</button>
+				<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-info" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+				</button>
+				<button type="button" name="myStateButton" data-complete-text="ok" class="btn" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+				</button>
+				<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-danger" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+				</button>
 			</div>
+			<script>			
+			  $('.btn-group button[name=myStateButton]').on('click', function () {
+				$('.btn-group button[name=myStateButton]').button('reset'); //.btn-group button
+			   // $(this).button('complete') // button text will be "finished!"
+			    var span = $(this).find('span');
+			    if($(span).hasClass('glyphicon-record')) {
+			    	$(span).removeClass('glyphicon-record');
+			    	$(span).addClass('glyphicon-ok');
+			    } else {
+			    	$(span).removeClass('glyphicon-ok');
+			    	$(span).addClass('glyphicon-record');
+			    	
+			    }
+			    console.log($(span).hasClass('glyphicon-ok'));
+			  });
+			  $('#rdb01').click();
+			</script>
         </div>     
         <div class="form-group">
-			<label class="col-sm-2 col-sm-2 control-label" for="role">Inicio</label>
-           	 <div class="col-sm-5">
+			<label class="col-sm-2 control-label" for="role">Inicio</label>
+           	 <div class="col-sm-4">
  	           	<select id="inicio" name="inicio" ng-model="update_medicacao.inicio" required class="form-control">
 	           		<option value="0">Agora</option>
 	           		<option value="1">Amanhã</option>
 	           		<option value="2">2 dias</option>
 	           	</select>
            	 </div>
-			<label class="col-sm-2 col-sm-2 control-label" for="role">Duração</label>
-           	 <div class="col-sm-5">
+			<label class="col-sm-2 control-label" for="role">Duração</label>
+           	 <div class="col-sm-4">
  	           	<select id="duracao" name="duracao" ng-model="update_medicacao.duracao" required class="form-control">
 	           		<option value="1">1 dia</option>
 	           		<option value="2">2 dias</option>
@@ -58,16 +89,16 @@
            	 </div>
         </div>
         <div class="form-group">
-			<label class="col-sm-2 col-sm-2 control-label" for="role">Frequencia</label>
-           	 <div class="col-sm-5">
+			<label class="col-sm-2 control-label" for="role">Frequencia</label>
+           	 <div class="col-sm-4">
  	           	<select id="frequencia" name="frequencia" ng-model="update_medicacao.frequencia" required class="form-control">
 	           		<option value="0">Agora</option>
 	           		<option value="1">Amanhã</option>
 	           		<option value="2">2 dias</option>
 	           	</select>
            	 </div>
-			<label class="col-sm-2 col-sm-2 control-label" for="role">Duração</label>
-           	 <div class="col-sm-5">
+			<label class="col-sm-2 control-label" for="role">Duração</label>
+           	 <div class="col-sm-4">
  	           	<select id="duracao" name="duracao" ng-model="update_medicacao.duracao" required class="form-control">
 	           		<option value="2">2 horas</option>
 	           		<option value="8">8 horas</option>
@@ -77,15 +108,15 @@
            	 </div>
         </div>
         <div class="form-group">
-			<label class="col-sm-2 col-sm-2 control-label" for="role">Dosagem</label>
-           	 <div class="col-sm-5">
+			<label class="col-sm-2 control-label" for="role">Dosagem</label>
+           	 <div class="col-sm-2">
  	           	<select id="dosagem" name="dosagem" ng-model="update_medicacao.dosagem" required class="form-control">
 	           		<option value="1">1</option>
 	           		<option value="2">2</option>
 	           		<option value="3">3</option>
 	           	</select>
            	 </div>
-           	 <div class="col-sm-5">
+           	 <div class="col-sm-2">
  	           	<select id="tipo" name="tipo" ng-model="update_medicacao.tipo" required class="form-control">
 	           		<option value="COMPRIMIDO">Comprimido</option>
 	           		<option value="GOTAS">Gotas</option>
