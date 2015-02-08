@@ -1,7 +1,7 @@
 <div class="form-panel">
     <h2>Edi&ccedil;&atilde;o de Medicação</h2>
 
-    <form novalidate="novalidate" name="medicacao_form" class="form-horizontal style-form" ng-submit="updateMedicacao()" role="form">
+    <form novalidate="novalidate" id="medicacao_form" ng-controller="MedicacaoDetailCtrl" name="medicacao_form" class="form-horizontal style-form" ng-submit="updateMedicacao()" role="form">
 
 		<div class="form-group">
 			<label class="col-sm-2 control-label">Nome Medicação</label>
@@ -31,29 +31,41 @@
  
         <div class="form-group">
 			<div class="col-sm-2">Prioridade</div>
-			<div class="btn-group col-sm-3" data-toggle="buttons">
-			  	<button type="button" name="myStateButton" id="rdb01" data-complete-text="ok" class="btn btn-primary" autocomplete="off">
-				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+			<div class="btn-group col-sm-3">
+<!-- 				<label class="btn active">
+                      <input type="radio" name="update_medicacao.prioridade" value="1" ng-model="update_medicacao.prioridade">
+                      <i class="fa fa-circle-o fa-2x red"></i>
+                      <i class="fa fa-check-circle-o fa-2x red"></i>
+                </label>
+ 				<label class="btn">
+                      <input type="radio" name="update_medicacao.prioridade" value="2" ng-model="update_medicacao.prioridade">
+                      <i class="fa fa-circle-o fa-2x orange"></i>
+                      <i class="fa fa-check-circle-o fa-2x orange"></i>
+                </label>			
+ 				<label class="btn">
+                      <input type="radio" name="update_medicacao.prioridade" value="3" ng-model="update_medicacao.prioridade">
+                      <i class="fa fa-circle-o fa-2x green"></i>
+                      <i class="fa fa-check-circle-o fa-2x green"></i>
+                </label> -->			
+			    <div class="btn-group">
+			        <label class="btn btn-success" ng-model="update_medicacao.prioridade" btn-radio="1">&nbsp</label>
+			        <label class="btn btn-warning" ng-model="update_medicacao.prioridade" btn-radio="2">&nbsp</label>
+			        <label class="btn btn-danger" ng-model="update_medicacao.prioridade" btn-radio="3">&nbsp</label>
+			    </div>
+			
+<!-- 				<button type="button" ng-click="setPrioridade(1)" name="prioridade" id="prioridade1" data-complete-text="ok" class="btn btn-danger" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true" id="spanPrioridade1"></span>
 				</button>
-			  	<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-warning" autocomplete="off">
-				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+			  	<button type="button" ng-click="setPrioridade(2)" name="prioridade" id="prioridade2" data-complete-text="ok" class="btn btn-warning" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true" id="spanPrioridade2"></span>
 				</button>
-				<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-success" autocomplete="off">
-				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+				<button type="button" ng-click="setPrioridade(3)" name="prioridade" id="prioridade3" data-complete-text="ok" class="btn btn-success" autocomplete="off">
+				   <span class="glyphicon glyphicon-record" aria-hidden="true" id="spanPrioridade3"></span>
 				</button>
-				<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-info" autocomplete="off">
-				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-				</button>
-				<button type="button" name="myStateButton" data-complete-text="ok" class="btn" autocomplete="off">
-				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-				</button>
-				<button type="button" name="myStateButton" data-complete-text="ok" class="btn btn-danger" autocomplete="off">
-				   <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-				</button>
-			</div>
+ -->			</div>
 			<script>			
-			  $('.btn-group button[name=myStateButton]').on('click', function () {
-				$('.btn-group button[name=myStateButton]').button('reset'); //.btn-group button
+			  /* $('.btn-group button[name=prioridade]').on('click', function () {
+				$('.btn-group button[name=prioridade]').button('reset'); //.btn-group button
 			   // $(this).button('complete') // button text will be "finished!"
 			    var span = $(this).find('span');
 			    if($(span).hasClass('glyphicon-record')) {
@@ -65,8 +77,11 @@
 			    	
 			    }
 			    console.log($(span).hasClass('glyphicon-ok'));
-			  });
-			  $('#rdb01').click();
+			  }); */
+/* 			    var escopo = angular.element(document.getElementById('medicacao_form')).scope();
+			    console.log(escopo.this.update_medicacao);
+			    console.log($(escopo)[0].this.update_medicacao);
+ */			 // $('#prioridade'+angular.element($("#update_medicacao.prioridade")).scope()).click();
 			</script>
         </div>     
         <div class="form-group">
@@ -97,17 +112,6 @@
 	           		<option value="2">2 dias</option>
 	           	</select>
            	 </div>
-			<label class="col-sm-2 control-label" for="role">Duração</label>
-           	 <div class="col-sm-4">
- 	           	<select id="duracao" name="duracao" ng-model="update_medicacao.duracao" required class="form-control">
-	           		<option value="2">2 horas</option>
-	           		<option value="8">8 horas</option>
-	           		<option value="12">12 horas</option>
-	           		<option value="24">24 horas</option>
-	           	</select>
-           	 </div>
-        </div>
-        <div class="form-group">
 			<label class="col-sm-2 control-label" for="role">Dosagem</label>
            	 <div class="col-sm-2">
  	           	<select id="dosagem" name="dosagem" ng-model="update_medicacao.dosagem" required class="form-control">
