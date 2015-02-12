@@ -48,9 +48,15 @@
                       <i class="fa fa-check-circle-o fa-2x green"></i>
                 </label> -->			
 			    <div class="btn-group">
-			        <label class="btn btn-success" ng-model="update_medicacao.prioridade" btn-radio="1">&nbsp</label>
-			        <label class="btn btn-warning" ng-model="update_medicacao.prioridade" btn-radio="2">&nbsp</label>
-			        <label class="btn btn-danger" ng-model="update_medicacao.prioridade" btn-radio="3">&nbsp</label>
+			        <label class="btn btn-success" ng-model="update_medicacao.prioridade" btn-radio="1" name="prioridade">
+				    	<span class="glyphicon glyphicon-record" aria-hidden="true" id="spanPrioridade"></span>
+					</label>
+			        <label class="btn btn-warning" ng-model="update_medicacao.prioridade" btn-radio="2" name="prioridade">
+	   				    <span class="glyphicon glyphicon-record" aria-hidden="true" id="spanPrioridade"></span>
+					</label>
+			        <label class="btn btn-danger" ng-model="update_medicacao.prioridade" btn-radio="3" name="prioridade">
+  				   		<span class="glyphicon glyphicon-record" aria-hidden="true" id="spanPrioridade"></span>
+					</label>
 			    </div>
 			
 <!-- 				<button type="button" ng-click="setPrioridade(1)" name="prioridade" id="prioridade1" data-complete-text="ok" class="btn btn-danger" autocomplete="off">
@@ -64,8 +70,8 @@
 				</button>
  -->			</div>
 			<script>			
-			  /* $('.btn-group button[name=prioridade]').on('click', function () {
-				$('.btn-group button[name=prioridade]').button('reset'); //.btn-group button
+/* 				$('.btn-group label[name=prioridade]').on('click', function () {
+				$('.btn-group label[name=prioridade]').button('reset'); //.btn-group button
 			   // $(this).button('complete') // button text will be "finished!"
 			    var span = $(this).find('span');
 			    if($(span).hasClass('glyphicon-record')) {
@@ -77,17 +83,18 @@
 			    	
 			    }
 			    console.log($(span).hasClass('glyphicon-ok'));
-			  }); */
+			    console.log($('.btn-group label[ng-value=prioridade]').hasClass('glyphicon-ok'));
+			  });  */
 /* 			    var escopo = angular.element(document.getElementById('medicacao_form')).scope();
 			    console.log(escopo.this.update_medicacao);
 			    console.log($(escopo)[0].this.update_medicacao);
- */			 // $('#prioridade'+angular.element($("#update_medicacao.prioridade")).scope()).click();
+ */			 // $('#prioridade'+angular.element($("#update_medicacao.prioridade")).scope()).click(); */
 			</script>
         </div>     
         <div class="form-group">
 			<label class="col-sm-2 control-label" for="role">Inicio</label>
            	 <div class="col-sm-4">
- 	           	<select id="inicio" name="inicio" ng-model="update_medicacao.inicio" required class="form-control">
+ 	           	<select id="inicio" name="inicio" ng-model="update_medicacao.inicio" class="form-control">
 	           		<option value="0">Agora</option>
 	           		<option value="1">Amanhã</option>
 	           		<option value="2">2 dias</option>
@@ -95,7 +102,7 @@
            	 </div>
 			<label class="col-sm-2 control-label" for="role">Duração</label>
            	 <div class="col-sm-4">
- 	           	<select id="duracao" name="duracao" ng-model="update_medicacao.duracao" required class="form-control">
+ 	           	<select id="duracao" name="duracao" ng-model="update_medicacao.duracao" class="form-control">
 	           		<option value="1">1 dia</option>
 	           		<option value="2">2 dias</option>
 	           		<option value="7">1 Semana</option>
@@ -106,7 +113,7 @@
         <div class="form-group">
 			<label class="col-sm-2 control-label" for="role">Frequencia</label>
            	 <div class="col-sm-4">
- 	           	<select id="frequencia" name="frequencia" ng-model="update_medicacao.frequencia" required class="form-control">
+ 	           	<select id="frequencia" name="frequencia" ng-model="update_medicacao.frequencia" class="form-control">
 	           		<option value="0">Agora</option>
 	           		<option value="1">Amanhã</option>
 	           		<option value="2">2 dias</option>
@@ -114,14 +121,14 @@
            	 </div>
 			<label class="col-sm-2 control-label" for="role">Dosagem</label>
            	 <div class="col-sm-2">
- 	           	<select id="dosagem" name="dosagem" ng-model="update_medicacao.dosagem" required class="form-control">
+ 	           	<select id="dosagem" name="dosagem" ng-model="update_medicacao.dosagem" class="form-control">
 	           		<option value="1">1</option>
 	           		<option value="2">2</option>
 	           		<option value="3">3</option>
 	           	</select>
            	 </div>
            	 <div class="col-sm-2">
- 	           	<select id="tipo" name="tipo" ng-model="update_medicacao.tipo" required class="form-control">
+ 	           	<select id="tipo" name="tipo" ng-model="update_medicacao.tipo" class="form-control">
 	           		<option value="COMPRIMIDO">Comprimido</option>
 	           		<option value="GOTAS">Gotas</option>
 	           		<option value="INJETAVEL">Injetável</option>

@@ -74,10 +74,13 @@ app.controller('MedicacaoDetailCtrl', function($scope, $rootScope, $routeParams,
 		$location.path('/medicacao/list');
 	};
 
-	$scope.update_medicacao = MedicacaoFactory.show({
-		id : $routeParams.id
-	});
+	$scope.update_medicacao = MedicacaoFactory.show({id : $routeParams.id});
+
+	$scope.setPrioridade = function(id) {
+		$scope.update_medicacao.prioridade = id;
+	};
 	
+	//	document.getElementById("spanPrioridade1" + $scope.update_medicacao.prioridade).addClass('glyphicon-ok');;
 
 });
 
