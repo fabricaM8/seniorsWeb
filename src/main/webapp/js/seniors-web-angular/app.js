@@ -2,6 +2,17 @@ var App = angular.module('seniorsApp', [ 'ngRoute', 'ngResource', 'ngCookies', '
 
 App.config([ '$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
 		
+			//  Atividade CRUD
+			$routeProvider.when('/atividade/list', {
+				templateUrl : 'partials/atividade/detail-atividade.html',
+				controller : ''
+			});
+			
+			$routeProvider.when('/atividade/detail/:id', {
+				templateUrl : 'partials/atividade/detail-atividade.html',
+				controller : ''
+			});
+			
 			//  Medicacao CRUD
 			$routeProvider.when('/medicacao/list', {
 				templateUrl : 'partials/medicacao/list-medicacao.html',

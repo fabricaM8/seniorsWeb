@@ -1,0 +1,104 @@
+<style>
+btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+color: #fff;
+background-color: #344B5F;
+border-color: #285e8e;
+}
+</style>
+<div class="form-panel">
+    <h2>Edi&ccedil;&atilde;o de Atividades</h2>
+
+    <form novalidate="novalidate" name="medicacao_form" class="form-horizontal style-form"  role="form">
+
+		<div class="panel panel-default" style="width: 80%; margin: auto;" >
+			<div class="panel-heading" style="background-color: orange">
+		    	<h1 class="panel-title" >Atividades Fisicas</h1>
+			</div>
+			<div class="panel-body">
+  				<div class="form-group">
+  					<label class="col-sm-3 control-label">Descrição</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="nome" name="nome" ng-model="update_medicacao.nome" 
+							placeholder="Descrição (ex. Aula Fisioterapeuta)" 
+		                	ng-minlength="2" ng-maxlength="140" maxlength="140" required/>
+					</div>
+  				</div>
+  				<div class="form-group">
+  					<label class="col-sm-3 control-label">Tipo de Atividade</label>
+					<div class="col-sm-9">
+						<select id="inicio" name="inicio"  required class="form-control">
+			           		<option  value="0" selected="selected">Aerobico (Caminhada, Corrida)</option>
+			           		<option value="1" >Musculação</option>
+			           		<option value="2">Abdominais</option>
+			           		<option value="3">Pilates</option>
+			           		<option value="4">Exercicios Funcionais</option>
+			           	</select>
+					</div>
+  				</div>
+  				<div class="form-group">
+  					<label class="col-sm-3 control-label">Data Inicio</label>
+					<div class="col-sm-3">
+						<p class="input-group">
+						<input type="text" class="form-control disabled" ng-disabled="disabled"
+								datepicker-popup="{{format}}" 
+								ng-model="dt" 
+								is-open="opened" 
+								min-date="minDate" 
+								show-weeks = "false" 
+								datepicker-options="dateOptions" 
+								date-disabled="disabled(date, mode)" 
+								ng-required="true" close-text="Fechar" show-button-bar = "false"  style="width:96%"/>
+						<span class="input-group-btn">
+						  <button type="button" class="btn btn-default" ng-click="open($event)" style="right:12px"><i class="glyphicon glyphicon-calendar"></i></button>
+						</span>
+			            </p>
+					</div>
+					<div class="col-sm-1">Hora</div>
+					<div class="col-sm-2"><input type="time" class= "form-control" value="23:30"></div>
+					<div class="col-sm-1">Duração</div>
+					<div class="col-sm-2">
+						<select id="duracao" name=duracao  required class="form-control">
+			           		<option  value="0" selected="selected">30 Min</option>
+			           		<option value="1" >1 Hora</option>
+			           		<option value="2">1:30 H</option>
+			           		<option value="3">2:00 H</option>
+			           		<option value="4">3:00 H</option>
+			           	</select>
+					</div>
+  				</div>
+  				<div class="form-group">
+  					<label class="col-sm-3 control-label">Dias da Semana</label>
+					<div class="col-sm-9">
+						<div class="btn-group" style="margin: auto">
+					        <label class="btn btn-primary" ng-model="checkModel.0" btn-checkbox>Domingo</label>
+					        <label class="btn btn-primary" ng-model="checkModel.1" btn-checkbox>Segunda</label>
+					        <label class="btn btn-primary" ng-model="checkModel.2" btn-checkbox>Terca</label>
+					        <label class="btn btn-primary" ng-model="checkModel.3" btn-checkbox>Quarta</label>
+					        <label class="btn btn-primary" ng-model="checkModel.4" btn-checkbox>Quinta</label>
+					        <label class="btn btn-primary" ng-model="checkModel.5" btn-checkbox>Sexta</label>
+					        <label class="btn btn-primary" ng-model="checkModel.6" btn-checkbox>Sabado</label>
+					    </div>
+					</div>
+  				</div>
+  				<div class="form-group">
+  					<label class="col-sm-3 control-label">Sugerir Medição de Peso antes da Atividade</label>
+  					<div class="col-sm-2">
+  						<select id="peso" name="peso"  required class="form-control">
+			           		<option  value="0" selected="selected">Sim</option>
+			           		<option value="1" >Não</option>
+			           	</select>
+  					</div>
+  				</div>
+			</div>
+			<div class="panel-footer">
+				<div class="form-group" style="margin-bottom: 0px; padding-bottom: 0px">
+					<div class="col-sm-9"></div>
+					<div class="col-sm-3">		
+		            	<button type="submit" ng-disabled="medicacao_form.$invalid" class="btn btn-primary pull-right" style="margin-left: 5px">Atualizar</button>
+		            	<button type="button" ng-click="cancel()" class="btn btn-default pull-right">Cancelar</button>
+		            </div>
+	            </div>
+			</div>
+		</div>
+    </form>
+</div>
