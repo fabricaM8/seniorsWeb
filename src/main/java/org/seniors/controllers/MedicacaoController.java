@@ -4,7 +4,7 @@ import static org.seniors.config.SeniorsServerMessages.MEDICACAO_ALREADY_EXISTS;
 
 import java.util.List;
 
-import org.seniors.dao.medicacaoDAO;
+import org.seniors.dao.MedicacaoDAO;
 import org.seniors.exceptions.SeniorsServerInternalException;
 import org.seniors.model.Medicacao;
 
@@ -16,7 +16,7 @@ import org.seniors.model.Medicacao;
 public class MedicacaoController {
 
 	private static MedicacaoController instance = null;
-	private static medicacaoDAO medicacaoDAO;
+	private static MedicacaoDAO medicacaoDAO;
 	private MedicacaoController() {}
 
 	/**
@@ -25,7 +25,7 @@ public class MedicacaoController {
 	public static MedicacaoController getInstance() {
 		if (instance == null) {
 			instance = new MedicacaoController();
-			medicacaoDAO = new medicacaoDAO();
+			medicacaoDAO = new MedicacaoDAO();
 
 		}
 
