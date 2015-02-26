@@ -3,13 +3,13 @@ package org.seniors.dao;
 import org.seniors.model.Medicacao;
 
 /**
- * Medicacao Entity DAO
+ * User Entity DAO
  *  
  * @author <a hre="mailto:juliosugaya@gmail.com">Julio Sugaya</a>
  */
-public class medicacaoDAO extends GenericDAO<Medicacao, Long> {
+public class MedicacaoDAO extends GenericDAO<Medicacao, Long> {
 
-	public medicacaoDAO() {
+	public MedicacaoDAO() {
 		super(Medicacao.class);
 	}
 }

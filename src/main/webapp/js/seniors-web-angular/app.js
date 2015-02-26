@@ -23,6 +23,11 @@ App.config([ '$routeProvider', '$locationProvider', '$httpProvider', function($r
 				templateUrl : 'partials/medicacao/detail-medicacao.html',
 				controller : 'MedicacaoDetailCtrl'
 			});
+			
+			$routeProvider.when('/medicacao/new', {
+				templateUrl : 'partials/medicacao/detail-medicacao.html',
+				controller : 'MedicacaoDetailCtrl'
+			});
 
 			//  Users CRUD
 			$routeProvider.when('/user/new', {

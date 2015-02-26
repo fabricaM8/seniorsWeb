@@ -35,19 +35,36 @@ services.factory('UserFactory', function ($resource) {
 
 //MEDICACAO
 services.factory('MedicacoesFactory', function ($resource) {
- return $resource(serverAddress+'/medicacao', {}, {
-     query: { method: 'GET', isArray: true },
-     queryRole: { method: 'GET', isArray: true },
-     create: { method: 'POST' }
- });
+return $resource(serverAddress+'/medicacao', {}, {
+   query: { method: 'GET', isArray: true },
+   queryRole: { method: 'GET', isArray: true },
+   create: { method: 'POST' }
+});
 });
 
 services.factory('MedicacaoFactory', function ($resource) {
- return $resource(serverAddress+'/medicacao/:id', {}, {
-     show: { method: 'GET' },
-     update: { method: 'PUT', params: {id: '@id'} },
-     remove: { method: 'DELETE', params: {id: '@id'} }
- });
+return $resource(serverAddress+'/medicacao/:id', {}, {
+   show: { method: 'GET' },
+   update: { method: 'PUT', params: {id: '@id'} },
+   remove: { method: 'DELETE', params: {id: '@id'} }
+});
+});
+
+//ATIVIDADE
+services.factory('AtividadesFactory', function ($resource) {
+return $resource(serverAddress+'/atividade', {}, {
+   query: { method: 'GET', isArray: true },
+   queryRole: { method: 'GET', isArray: true },
+   create: { method: 'POST' }
+});
+});
+
+services.factory('AtividadeFactory', function ($resource) {
+return $resource(serverAddress+'/atividade/:id', {}, {
+   show: { method: 'GET' },
+   update: { method: 'PUT', params: {id: '@id'} },
+   remove: { method: 'DELETE', params: {id: '@id'} }
+});
 });
 
 //Login service

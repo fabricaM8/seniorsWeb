@@ -11,6 +11,8 @@ import org.seniors.controllers.SeniorsUserController;
  */
 public interface SeniorsServerControllerFacade {
 
+	public AtividadeController getAtividadeController();
+
 	public MedicacaoController getMedicacaoController();
 	
 	public UserController getUserController();

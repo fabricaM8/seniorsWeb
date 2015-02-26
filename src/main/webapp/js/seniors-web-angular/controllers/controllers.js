@@ -78,6 +78,7 @@ app.controller('MedicacaoDetailCtrl', function($scope, $rootScope, $routeParams,
 		id : $routeParams.id
 	});
 	
+	//	document.getElementById("spanPrioridade1" + $scope.update_medicacao.prioridade).addClass('glyphicon-ok');;
 	//DataPicker
 	 $scope.today = function() {
 		    $scope.dt = new Date();
